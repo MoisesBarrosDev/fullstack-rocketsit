@@ -1,0 +1,8 @@
+/* Mais específico 
+- Style
+- !important não é recomendado pois esse é oque tem mais importancia
+*/
+
+#title {
+  font-size: 12px !important;
+}

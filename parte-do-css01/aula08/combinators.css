@@ -1,0 +1,47 @@
+/* Combinator 
+- Descendent
+- List
+- Next sibling
+- Child
+*/
+
+/* O combinador descendente em CSS é utilizado para selecionar elementos que estão dentro de um elemento pai,
+ mas ele não se limita apenas aos filhos diretos (imediatos). Ele também alcança todos os descendentes, ou seja,
+  elementos que estão em qualquer nível de profundidade dentro do elemento pai.  */
+/* EXEMPLO DE USO : */
+/*  article p{
+    color: red;
+  }   */
+
+
+/*  o combinador de lista, também conhecido como seletores múltiplos, permite que você aplique o mesmo estilo a vários elementos
+   ao mesmo tempo. Esse combinador é representado por uma vírgula (,) entre os seletores. Com ele, você pode definir estilos para
+    diversos elementos em uma única linha, simplificando o código. */
+/* EXEMPLO DE USO: */
+
+/*  span, mark{
+       color: red;
+    } */
+
+
+/* (next sibling combinator) em CSS é representado pelo símbolo + e serve para selecionar o elemento que vem imediatamente após outro elemento no mesmo nível (irmão direto).
+Como Funciona:
+Esse combinador permite aplicar estilos a um elemento, mas somente se ele vier logo em seguida de outro elemento específico. O elemento-alvo deve ser um "irmão direto",
+ ou seja, deve estar no mesmo nível hierárquico no HTML. */
+/* EXEMPLO DE USO: */
+ 
+h2 + p {
+  color:  red;
+}
+
+/* (child combinator) em CSS é representado pelo símbolo > e seleciona elementos que são filhos diretos de outro elemento.
+ Isso significa que ele só aplica o estilo aos elementos que estão exatamente um nível abaixo do elemento pai, e não a outros descendentes em níveis mais profundos. */
+ /* ele tambem pode ser usado assim: div > p > span é uma boa prática se a estrutura for clara e você precisar de um controle específico. No entanto, use com moderação para manter a flexibilidade do código.*/
+ /* é uma Boa Prática?
+Sim, se a estrutura for previsível e fixa: Quando a hierarquia é estável e os elementos têm papéis bem definidos, isso pode melhorar a legibilidade e a especificidade do CSS.
+Não, se a estrutura é propensa a mudanças: Cadeias de combinadores muito específicas podem dificultar a manutenção. Se a estrutura do HTML mudar, o estilo pode se tornar inválido ou não aplicar corretamente.
+  EXEMPLO DE USO: */
+
+aside > ul {
+  margin-top: 60px;
+}

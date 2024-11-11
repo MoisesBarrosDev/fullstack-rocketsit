@@ -1,0 +1,21 @@
+/*    anatomia 
+* declaration
+* selector
+* {} - context
+* Properties
+* Property value
+*/
+
+/* a declaration é todo esse conjunto abaixo apresentado */
+/* o h1 é o selector */
+/*  dentro do par de {} ele cria um contexto */
+/*  antes dos : são as properties */
+/* e depois dos : são os Property value, alguns tem nome, outros numeros */
+
+h1{ 
+color: blue;
+font-size: 60px;
+letter-spacing: 2;
+text-transform: uppercase;
+
+}

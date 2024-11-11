@@ -1,0 +1,12 @@
+/* Cascading
+ - Cascata
+ - Hierarquia de regras
+*/
+/* preste atenção no comportamento , ele sempre vai em consideração o ultimo elemento na hierarquia das regras aquele vier depois */
+p{
+  color: violet;
+}
+
+.green {
+  color:green;
+}

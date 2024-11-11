@@ -1,0 +1,8 @@
+div{
+  border: solid;/* borda da caixa*/
+  width: 200px;/*largura da caixa*/
+  height: 200px;/* altura da caixa*/
+
+  padding: 20px; /*preenchimento interno*/
+  margin: 20px; /*espaço ao redor*/
+}

@@ -1,0 +1,8 @@
+.border{
+  border: 3mm ridge rgba(251, 220, 50, .6) ;
+  /* border-width: 4px 2px 6px 15px;
+  border-style: dotted solid double dashed;
+  border-color: red green blue black; */
+/* border-style: solid; */
+  /* border-bottom: 3mm ridge  rgba(251, 220, 50, .6); */
+}

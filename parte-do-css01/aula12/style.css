@@ -1,0 +1,10 @@
+div,
+span {
+  /* min-width: 200px;
+  max-width: 300px;
+  width: 100px; */
+  border: solid;
+  min-height: 200px;
+  max-height: 300px;
+  height: 1500px;
+}

@@ -1,0 +1,20 @@
+div,
+span {
+  width: 200px;
+  height: 100px;
+  border: 1px solid;
+  
+}
+
+/* NÃO APLIQUE PADDINNG NO DISPLAY-INLINE */
+.padding {
+  /*padding sgnifica preenchimento, e ele aqui é usado como o preenchimento das caixas*/
+  /* padding: 20px 40px 0 10px; */
+
+  /* box-sizing define como o tamanho total de um elemento é calculado:
+  content-box (padrão): largura/altura inclui só o conteúdo, margens ficam fora.
+  border-box: largura/altura incluem conteúdo, padding e borda juntos. */
+  box-sizing: border-box;
+  padding: 40px;
+
+}

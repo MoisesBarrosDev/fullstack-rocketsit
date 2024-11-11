@@ -1,0 +1,27 @@
+div,
+span {
+  border: solid red;
+  width: 50%;
+  /*so os display-block recebe largura*/
+}
+
+/*  o display inline so recebe nas laterais */
+.margin {
+  /* margin: 30px; aplica para todos os sentidos, em cima,direita,em baixo e esquerda*/
+  /* margin-top: 30px; aplica somente para o topo , quando o elemento é inline ele não recebe o margin-top */
+  /* margin-left: 60px; ele aplica um espaço na esquerda */
+  /* margin: 30px 10px; no caso desse margin ele está aplicando os 30px em cima e embaixo e os 10px seria esquerda e direita */
+  /* margin: 30px 10px 80px; no caso desse margin ele está aplicando os 30px em cima e os 10px seria esquerda e direita e os 80px em baixo */
+
+  /* no caso desse margin ele está aplicando os 30px em cima e os 10px direita e os 80px em baixo e os 4rem é o lado esquerdo */
+  /* margin: 30px 10px 80px 4rem; */
+
+  /*esse 'auto' é referente a largura predefinida na tag acima, so funciona pra display-block , e o "auto" so pega as larguras*/
+  /* margin: auto; */
+
+  /* Margin collapsing é quando as margens verticais de elementos adjacentes (superior e inferior) se unem, 
+  formando uma única margem igual à maior delas, em vez de somarem. e so ocorre com display block*/
+  /* margin: 30px; */
+
+
+}

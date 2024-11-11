@@ -1,0 +1,13 @@
+/* 
+Valores e unidades de medidas
+cada propiedade possui valores
+`property: value`
+as syntax dele estão ao lado
+*/
+
+h1 {
+color: blue;/*color*/
+font-size: 32px;/*length*/
+letter-spacing: 2;/*number*/
+text-transform: uppercase;/*keyword*/
+}

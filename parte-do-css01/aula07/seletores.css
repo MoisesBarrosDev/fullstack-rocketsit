@@ -1,0 +1,33 @@
+/*  Seletores 
+- type | element | tag
+- id
+- class
+- atributo
+- universal
+*/
+
+p {
+  /* seletor de tags*/
+  color: blue;
+}
+
+#text {
+  /* seletor de id*/
+  color: blueviolet;
+}
+
+.pink {
+  /* seletor de  class*/
+  color: pink;
+}
+
+
+[title="t"] {
+  /* seletor de atributo*/
+  color: black;
+}
+
+* {
+  /* seletor universal,sgnififca que tudo que estiver dentro da pagina vai aplicar a cor 'red'*/
+  color: red;
+}
