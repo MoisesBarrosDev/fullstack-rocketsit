@@ -1,0 +1,14 @@
+/* 
+font (shorthand)
+font-style, font-variant
+font-weight, font-stretch,
+font-size/line-height
+font-family
+
+*/
+
+
+p{
+  /* é obrigatorio colocar nesse shorthand pelo menos 2 propiedades que é : font-family e font-size */
+font:italic small-caps bold condensed 16px/1.6 sans-serif;
+}

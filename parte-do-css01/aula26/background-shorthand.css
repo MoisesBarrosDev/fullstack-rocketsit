@@ -1,0 +1,21 @@
+/* background */
+
+body {
+  display: flex; /* Ativa o Flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Faz o body ocupar toda a altura da janela */
+  margin: 0; /* Remove margens padrão */
+}
+
+
+div{
+  height: 300px;
+  width: 300px;
+  
+  /* background-image: url(photo/favicon.ico);
+  background-repeat: no-repeat;
+  background-size: cover; */
+
+  background: black url(photo/favicon.ico) no-repeat center/50px;
+}

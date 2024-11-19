@@ -1,0 +1,24 @@
+/* 
+color
+text-transform
+text-decoration
+*/
+
+p {
+  /* text-transform: uppercase; todas as letras em caixa alta*/
+  /* text-transform: lowercase; todas as letras em caixa baixa */
+  /* text-transform: capitalize; pega todas as primeiras letras de cada frase e deixa em caixa alta */
+  /* text-transform: none; por padrão ele é 'none' sgnifica que não há transformação*/
+  text-transform: lowercase;
+}
+
+mark {
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: underline red double 3px;
+  /* text-decoration: none; */
+}

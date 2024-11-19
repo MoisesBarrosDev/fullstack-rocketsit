@@ -1,0 +1,15 @@
+/*  font-family */
+p {
+  /* genéricos */
+  /* font-family: monospace; */
+
+  /* nome da familia + genéricos */
+
+  /* no caso ele não encontrou as 2 primeiras fontes e está caindo na 3 fonte que o nome é 'Lucida Grande' 
+ o nome desse evento se chama fallback. **Fallback** é uma solução alternativa usada quando um recurso principal falha. Em programação e design,
+ refere-se a uma configuração ou método que substitui o padrão quando ele não funciona ou não é suportado.
+ Famílias de fontes genéricas são um mecanismo de fallback, um meio de preservar parte da intenção do autor da folha de estilo quando nenhuma das fontes especificadas estiver disponível.
+ Nomes de famílias genéricas são palavras-chave e não devem ser citadas. Uma família de fontes genérica deve ser o último item na lista de nomes de famílias de fontes.
+*/
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

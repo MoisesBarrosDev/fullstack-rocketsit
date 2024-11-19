@@ -1,0 +1,20 @@
+/*
+background-position
+background-size
+*/
+
+body {
+  height: 100vh;
+ background-color: pink; 
+ background-image: url(photo/favicon.ico);
+ background-repeat: no-repeat;
+ /* background-position-x: center; o position-x é o eixo horizontal, nesse eixo o ideal é usar os valores:right,left ,center */
+ /* background-position-y:center ; o position-y é o eixo vertical, nesse eixo o ideal é usar os valores:top(ja vem por padrão),bottom,center */
+ /* background-position: center bottom; nesse shorthand o name que você colocar representa o x, e o segundo o y*/
+ background-position: center;
+ 
+ /*posso trabalharcom tamanhos fixos exemplo: 200px, posso usar tamanhos relativos: 1rem, posso trabalhar com porcentagem : 100% */
+ /* posso usar o name 'contain' isso sgnifica que ele vai conter no espaço que está disponivel pra ele, isso sgnifica que se o espaço for menor ele vai se adptar ao espaço. */
+ /* posso usar o name 'cover' isso sgnifica que ele é uma cobertura, no caso ele cobre um espaço, no caso se ampliar a tela ele vai aumentando de acordo com a nescessidade. */
+ background-size: 10%;
+}

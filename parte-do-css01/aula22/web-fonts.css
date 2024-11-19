@@ -1,0 +1,11 @@
+/* web fonts */
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;  /*posso colocaro peso da font 300,400,700. pois foi apenas essas que eu importei*/
+}
+
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+}

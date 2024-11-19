@@ -1,0 +1,9 @@
+/* 
+font-style,
+font-weigth
+*/
+
+p {
+  /* font-style:italic ; */
+  font-weight: normal;
+}

@@ -1,0 +1,25 @@
+/* 
+text-aling = alinhamento de texto
+line-height = altura da linha
+
+*/
+
+p {
+  /* text-align: center; alinhado ao centro da pagina */
+  /* text-align: right; alinhado ao canto direito da pagina*/
+  /* text-align: left; é um texto alinhado ao canto esquerdo da pagina */
+  /* text-align: justify; é um texto que vai ter um espaço entre as palavras */
+  /* text-align: start; é um texto que se alinha ao começo da caixa */
+  /* text-align: end; é um texto que se alinha ao final da caixa */
+  text-align: justify;
+  /* é um multiplicador da altura da linha em relação ao tamanho da fonte. Aqui, a altura da linha será 1,5 vezes
+  o tamanho da fonte, aumentando o espaço vertical entre linhas de texto.
+
+  Quando você usa line-height: 1.5;, ele multiplica o tamanho da fonte atual por 1.5 para definir a altura da linha.
+  Por exemplo, se a fonte é de 16px:
+  A altura da linha será 16px × 1.5 = 24px.
+  Isso cria um espaço vertical mais espaçado entre as linhas, mas é proporcional ao tamanho da fonte.
+ */
+  line-height: 1.5;
+  /* line-height: 20px; isso é a altura da linha  */
+}

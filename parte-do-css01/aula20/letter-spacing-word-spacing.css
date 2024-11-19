@@ -1,0 +1,9 @@
+/* 
+letter-spacing = espaço entre letras
+word-spacing = espaços entre palavras
+*/
+
+p{
+  letter-spacing: 0.3px;
+  word-spacing: 2px;
+}
