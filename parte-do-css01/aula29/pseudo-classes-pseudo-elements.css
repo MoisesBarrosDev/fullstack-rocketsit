@@ -1,0 +1,72 @@
+/* PSEUDO-CLASSES */
+
+/* ENTRE NA DOCUMENTAÇÃO E PESQUISE SOBRE PSEUDO CLASSES E PSEUDO ELEMENTS */
+:root {
+  /*root sgnifica raiz, a tag raiz do html, ela até tem mais peso que o html*/
+
+}
+
+div {
+  width: 40px;
+  height: 40px;
+  border: solid;
+  text-align: center;
+  line-height: 250%;
+  margin-top: 4px;
+}
+
+/* o hover é uma interação com o usario, isso é quando o usuario passar em cima das caixas vai ficar preta,
+   pois eu definir um background color black, porem so funciona se eu colocar o :hover  */
+/* div:hover{
+  background-color: black;
+
+} */
+
+
+/* oque esse codigo abaixo está dizendo coloque o background-color aonde não tem uma div com a class nao. 
+obs: quando for puxar uma class não esqueça de colocar um ponto */
+/* div:not(.nao){
+  background-color:brown;
+} */
+
+
+/*oque esse codigo abaixo está dizendo é o seguinte , se tiver hover em alguma div a section vai receber a borda  */
+/* has sgnifica ter */
+/* section:has(div:hover){
+  border: 2px solid red;
+} */
+
+/* no caso eu coloco primeiro oque eu quero pegar; exemplo div:nth-child(2),
+esse codigo quer dizer um seguinte, pegue o filho que é a div, porém eu quero o elemento de numero 2, que no caso é a  div,
+porém se esse elemento de numero 2 não for a div e caso haja uma tag no meio exemplo: <div></div> <span></span> <div></div> você terá que trocar o número 2 pelo numero 3.
+pois a div passou a ser o elemento de numero 3. Caso queira colocar em uma tag especifica igual seria essa do <span></span> que ela está no meio entre 2 div,você terá que colocar
+assim: span:nth-child(2) pois a span é o elemento de numero 2 e a div é o elemento de numero 1*/
+/* div:nth-child(2) {
+  background-color: aquamarine;
+} */
+
+
+
+/* PSEUDO-ELEMENTS */
+
+
+/* pegue a primeira letra e coloque um size de 40px*/
+/* div::first-letter{
+  font-size: 40px;
+} */
+
+
+div{
+  position: relative;
+}
+
+/* antes do conteudo cire um elemento. content : "a" */
+div::before {
+  content: "a";
+  height: 100%;
+  width: 2px;
+  background-color: red;
+ position: absolute;
+ top: 0;
+ left: 0;
+}

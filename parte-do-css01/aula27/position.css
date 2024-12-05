@@ -1,0 +1,223 @@
+div {
+  background-color: black;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+}
+
+.position {
+  background-color: red;
+  /* O z-index controla a ordem de sobreposição dos elementos em uma página, como se fossem camadas.
+  Pense assim:
+  Imagine uma pilha de papéis na sua mesa. O z-index define qual papel fica por cima ou por baixo.
+  Regras simples:
+  Valor maior = camada superior
+  Um elemento com z-index: 2 ficará acima de um elemento com z-index: 1.
+  Valor menor = camada inferior
+  Um elemento com z-index: -1 pode ficar abaixo de tudo (até atrás do fundo, dependendo do contexto).
+  O z-index só funciona se o elemento tiver uma propriedade de posição definida (como position: relative, absolute, fixed, ou sticky).
+  O z-index é como uma pilha: quanto maior o valor, mais "no topo" o elemento estará.
+  /* z-index: -1; */
+  
+
+
+  /* position relative: há normal flow*/
+  
+  /* position: relative; */
+  /* top: 20px; */
+  /* left: 20px; */
+  
+  /* O position: relative; é usado para posicionar um elemento relativo à sua posição original no fluxo da página.
+  Como funciona:
+  Mantém sua posição normal no layout por padrão:
+  O elemento ainda ocupa o mesmo espaço no layout como se estivesse sem position: relative;.
+  Desloca o elemento com top, left, right, ou bottom:
+  Os deslocamentos ajustam a posição visual sem afetar os outros elementos, que continuam agindo como se ele estivesse na posição original.
+  Exemplo:
+  html
+  <div style="position: relative; top: 20px; left: 30px; background: lightblue; padding: 10px;">
+  Elemento com posição relativa
+  </div>
+  O que acontece aqui:
+  O elemento azul é movido 20px para baixo (top: 20px;) e 30px para a esquerda (left: 30px;).
+  Espaço original: Os outros elementos na página ainda agem como se o elemento estivesse na posição inicial (não deslocado).
+  Quando usar:
+  Para criar uma referência de posicionamento:
+  Se um elemento filho tiver position: absolute;, ele será posicionado em relação ao pai com position: relative;.
+  Para deslocar ligeiramente um elemento sem alterar o fluxo geral.
+  Diferença de outros position:
+  static (padrão): Não permite deslocamentos.
+  absolute: Sai completamente do fluxo da página.
+  relative: Permite deslocar o elemento sem alterar o fluxo geral.
+  Resumo:
+  position: relative; mantém o elemento no fluxo normal, mas permite deslocá-lo visualmente com top, left, right, ou bottom.
+  É útil para pequenos ajustes ou para criar um ponto de referência para elementos filhos.
+  */
+  
+
+  
+  /* position absolute não há normal flow */
+  
+  /*O position: absolute; permite que você posicione um elemento em relação ao seu ancestral mais próximo que tenha uma posição definida (relative, absolute, ou fixed). Se nenhum ancestral tiver uma posição definida, ele será posicionado em relação à página inteira (o <html>).
+
+  Características principais:
+  Remove o elemento do fluxo normal da página:
+  O elemento não ocupa mais espaço no layout como faria normalmente.
+  É posicionado usando as propriedades top, right, bottom, e left:
+  Esses valores definem a distância do elemento em relação ao seu elemento de referência.
+  Exemplo básico:
+  html
+  Copiar código
+  <div style="position: relative; width: 200px; height: 200px; background: lightblue;">
+  <div style="position: absolute; top: 20px; left: 20px; width: 50px; height: 50px; background: red;">
+  Caixa Absoluta
+  </div>
+  </div>
+Explicação:
+O contêiner azul tem position: relative;, então a caixa vermelha será posicionada em relação a ele.
+top: 20px; e left: 20px; movem a caixa vermelha 20px a partir do topo e da esquerda do contêiner azul.
+Se o contêiner azul não tivesse position: relative;, a caixa vermelha seria posicionada em relação à página inteira.
+Resumo:
+position: absolute; posiciona um elemento fora do fluxo normal da página.
+Ele é posicionado relativo ao primeiro ancestral com position: relative, absolute, ou fixed.
+Se não houver um ancestral posicionado, ele será relativo à janela/págin  */
+  /* position: absolute; */
+  /* z-index: -1; */
+
+
+
+/* O position: fixed; posiciona um elemento sempre em relação à janela de visualização (viewport), independentemente de rolagem ou do layout da página.
+
+Características principais:
+Fixo na janela:
+O elemento não se move ao rolar a página.
+Usa as propriedades top, right, bottom, e left:
+Define a posição do elemento em relação à borda da janela do navegador.
+Sai do fluxo normal da página:
+Assim como absolute, o elemento não ocupa espaço no layout.
+Exemplo:
+html
+Copiar código
+<div style="height: 1500px; background: lightblue;">
+  <div style="position: fixed; top: 10px; left: 10px; background: red; color: white; padding: 10px;">
+    Caixa Fixa
+  </div>
+</div>
+O que acontece:
+A "Caixa Fixa" ficará no canto superior esquerdo da janela (top: 10px; left: 10px;), mesmo se você rolar a página para baixo.
+Uso comum:
+Menus fixos ou barras de navegação.
+Botões de "voltar ao topo".
+Avisos ou notificações visíveis o tempo todo.
+Resumo:
+position: fixed; mantém o elemento sempre no mesmo lugar em relação à janela do navegador.
+Ele ignora a rolagem da página e não depende de nenhum elemento ancestral para se posicionar. */
+  /* position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: -1; */
+
+
+
+  /* O position: sticky; é como uma mistura entre relative e fixed, e funciona assim:
+  
+  Comportamento "relative" por padrão:
+  
+  O elemento fica no seu lugar natural no layout até um certo ponto.
+  Comportamento "fixed" ao atingir um limite:
+  
+  Quando você rola a página e o elemento atinge uma posição definida por top, right, bottom ou left, ele "gruda" (fica fixo) em relação ao seu container pai.
+  Retorna ao fluxo normal:
+  
+  Se o container pai terminar (for rolado para fora da tela), o elemento volta ao fluxo natural.
+  Exemplo simples:
+  html
+  Copiar código
+  <div style="height: 1500px;">
+  <header style="position: sticky; top: 0; background: lightblue; padding: 20px;">
+    Cabeçalho que gruda no topo
+  </header>
+  <p>Role para ver o efeito...</p>
+  </div>
+  Explicação:
+  position: sticky; top: 0; faz o elemento "grudar" no topo da tela enquanto você rola.
+  Ele permanece "fixo" até o final do container pai (o <div> neste caso).
+  Quando usar:
+  Cabeçalhos, menus ou barras que devem ficar visíveis em rolagens curtas.
+  Tabelas com colunas ou linhas fixas enquanto você rola.
+  Requisitos importantes:
+  position: sticky; depende de um container pai com altura definida.
+  
+  Se o pai não tiver altura suficiente, o sticky não funciona.
+  Precisa de propriedades como top, left, right, ou bottom.
+  
+  Sem elas, o comportamento sticky não é ativado.
+  Resumo:
+  O sticky combina os melhores aspectos de relative (movimento natural no fluxo) e fixed (grudar em um ponto).
+  É ideal para elementos que precisam ser fixos dentro de uma área específica, mas não na página inteira.
+  */
+  
+  /* position: sticky; */
+  /* top: 20px; */
+  /* right: 20px; */
+  /* z-index: auto; */
+  
+  
+
+/* INSET */
+/* O inset é uma propriedade abreviada no CSS usada para definir as propriedades top, right, bottom e left de uma só vez. Em vez de escrever essas quatro propriedades separadamente, você pode usar inset para simplificar o código.
+
+Sintaxe:
+css
+Copiar código
+inset: <valor-top> <valor-right> <valor-bottom> <valor-left>;
+Valores aceitos:
+Comprimentos absolutos: px, em, rem, etc.
+Porcentagens: Valores relativos ao elemento pai.
+Palavras-chave: auto ou inherit.
+Como funciona:
+Funciona exatamente como o modelo de margin ou padding, aceitando 1 a 4 valores:
+1 valor: Aplica a todos os lados.
+css
+Copiar código
+inset: 10px;
+/* Top, right, bottom e left = 10px */
+/* 2 valores: O primeiro é para top e bottom, o segundo é para right e left.
+css
+Copiar código
+inset: 10px 20px; */
+/* Top e bottom = 10px, right e left = 20px */
+/* 3 valores: O primeiro é para top, o segundo é para right e left, o terceiro é para bottom.
+css
+Copiar código
+inset: 10px 20px 30px; */
+/* Top = 10px, right e left = 20px, bottom = 30px */
+/* 4 valores: Aplicam individualmente para top, right, bottom, e left.
+css
+Copiar código
+inset: 10px 20px 30px 40px; */
+/* Top = 10px, right = 20px, bottom = 30px, left = 40px */
+/* Exemplo simples:
+html
+Copiar código
+<div style="position: absolute; inset: 10px 20px;">
+  Este elemento usa a propriedade inset!
+</div>
+O que acontece:
+
+top e bottom são configurados como 10px.
+right e left são configurados como 20px.
+Benefícios:
+Economiza código: Substitui quatro propriedades (top, right, bottom, left) por uma única linha.
+Consistência: Torna o código mais legível e fácil de manter.
+Resumo:
+O inset é uma forma mais curta de definir os deslocamentos de um elemento (top, right, bottom, e left) de uma vez só. Ele funciona em elementos com position: relative, absolute, fixed, ou sticky. */ 
+
+position: absolute;
+width: 100%;
+height: 100%;
+z-index: 10;
+inset: 0;
+opacity: 0.3;
+
+}

@@ -1,0 +1,290 @@
+/* Se o eixo principal for horizontal (flex-direction: row),
+O Justify-content: Alinha os itens na horizontal. 
+O align-items: Alinha os itens na vertical.  */
+/* Se o eixo principal for vertical (flex-direction: column), os papéis se invertem. */
+/* - **`align-items`**: Alinha **itens individuais** dentro de uma linha no eixo transversal.  
+- **`align-content`**: Alinha o **conjunto de linhas** no eixo transversal (funciona apenas com múltiplas linhas). */
+.container {
+  border: dashed;
+}
+
+.item {
+  --hue: 0;
+  /* border: solid red; */
+  /* width: 150px; */
+  text-align: center;
+  background-color: hsl(var(--hue), 100%, 70%);
+}
+
+.item-2 {
+  --hue: 100;
+}
+
+.item-3 {
+  --hue: 200;
+}
+
+.item-4 {
+  --hue: 300;
+}
+
+.item-6 {
+  --hue: 100;
+
+}
+
+.item-7 {
+  --hue: 200;
+  
+}
+
+.item-8 {
+  --hue: 300;
+  
+}
+/* IMPORTANTE: TUDO QUE É PRA APLICAR EM CONTAINER : display, flex-flow(flex-direction, flex-wrap), gap(row-gap,column-gap),justify-content,align-itemns,align-content. */
+.container {
+  /* display: flex; */
+  
+  /*shorthand*/
+  /* flex-flow: wrap column; */
+  
+  /*shorthand*/
+  /* gap: 2rem; */
+  
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* align-content: center; */
+}
+
+
+/* IMPORTANTE: TUDO QUE É PRA APLICAR PROS FILHOS OU ITENS OU MELHOR CHILDREN:flex,flex-grow,flex-shrink,flex-basis,align-self */
+.item{
+  /*shorthand*/
+  /* flex: 1 0 150px; */
+
+  /* flex-grow: 1; */
+  /* flex-shrink: 0; */
+  /* flex-basis: 120px; */
+  /* align-self: self-end; */
+}
+
+
+/* container,itens e eixo */
+
+.container {
+  /* height: 50vh; */
+  display: flex;
+  /* flex-direction: column; */
+}
+
+/* justify-content = alinhamento do conteudo.  */
+
+/*  o justify-content é usado para alinhamento do conteúdo no eixo principal
+ (horizontal ou vertical, dependendo da direção do flex container). Ele é mais comumente utilizado em layouts com Flexbox ou Grid, 
+ controlando como os itens são distribuídos e alinhados. */
+
+/* 
+space-between:
+O espaço é distribuído somente entre os itens, sem espaço nas extremidades do container.
+Quando usar: Quando você quer que os itens ocupem o máximo de espaço entre si, mas fiquem "encostados" nas bordas do container.
+
+space-around:
+O espaço é distribuído ao redor de cada item, mas as extremidades recebem metade do espaço em comparação com o interior.
+Quando usar: Quando você quer uma distribuição equilibrada ao redor dos itens, mas com menos espaço nas extremidades do container.
+
+space-evenly:
+O espaço é distribuído igualmente entre todos os itens e as extremidades.
+Quando usar: Quando você quer um espaçamento uniforme e simétrico, tanto entre os itens quanto nas bordas do container.
+
+Resumo:
+space-between: Ideal para layouts com destaque nas extremidades do container.
+space-around: Para distribuições com um espaçamento "leve" ao redor de cada item.
+space-evenly: Para layouts totalmente simétricos e uniformes. */
+
+
+.container {
+  /* justify-content: space-evenly; */
+}
+
+
+
+/* align-items */
+/* por padrão o align-items utiliza o stretch,que sgnifica "estica" */
+
+.container {
+  /* align-items: stretch; = isso significa alinhe os items esticando. */
+  /* align-items:flex-start ; = isso significa alinhe os items no começo do container.*/
+  /* align-items: center; = isso significa alinhe os items no centro*/
+  /* align-items:flex-end ;= isso significa alinhe os items no final do container */
+  /* align-items: baseline; = isso significa alinhe os items pela base do texto que tem o elemento */
+}
+
+
+/* gap e margin */
+/* o gap significa  espaço entre os elementos*/
+
+.container {
+  /* gap: 20px; */
+  /* align-items: center; */
+}
+
+.item-1 {
+  /* margin-top: auto; */
+}
+
+
+/*  Multi-line */
+/* por padrão o flex-wrap recebe o valor  de nowrap */
+/*  o flex-wrap:wrap significa quando o elemento não estiver cabendo dentro de um container ,quebre pra outra linha. */
+.container {
+  /* height: 50vh; */
+  /* flex-wrap: nowrap; */
+  /*flex-wrap:wrap;*/
+  /*Quando acontece o wrap sgnifica que há uma duplicação do eixo principal que é o eixo (HORIZONTAL)*/
+  /*flex-wrap: wrap-reverse;*/
+  /*O wrap-reverse é pra reverter as 2 linhas do eixo principal, a linha de cima desce e de baixo sobe.*/
+
+  /* align-items: Alinha itens individuais dentro de uma linha no eixo transversal.
+  align-content: Alinha o conjunto de linhas no eixo transversal (funciona apenas com múltiplas linhas).*/
+  /* flex-wrap: wrap; */
+  /* align-items: center; */
+  /* Sem align-content, as linhas têm eixos separados. */  
+  /* Com align-content, as linhas se alinham como um só. */
+  /*align-content:flex-start ;*/ /*alinhe os conteudos*/
+  /* align-content: space-evenly; */
+}
+
+
+/* flex-basis */
+/* flex-basis controla o tamanho inicial de um item, mas funciona no eixo principal.
+Se o eixo principal for horizontal (padrão com flex-direction: row), ele substitui o width.
+Se o eixo principal for vertical (com flex-direction: column), ele substitui o height.
+Ou seja, o flex-basis não substitui sempre o width ou o height, depende de como o eixo principal está configurado. */
+/* .container{
+  flex-direction: column;
+  
+} */
+
+.container{
+  /* height: 50vh; */
+}
+.item{
+  /* flex-basis: 10%; */
+}
+
+
+
+
+.container{
+  /* flex-direction: column;
+  height: 50vh;
+  align-items: stretch; */
+}
+
+
+/* FLEX-GROW E FLEX-SHRINK */
+/* PORQUE QUANDO COLOCAMOS O FLEX-BASIS DE 120PX E MESMO ASSIM CABE DENTRO DA CAIXA? */
+/* PORQUE POR PADRÃO O FLEX-SHRINK É 1  QUANDO VOCÊ TIRA ESSE VALOR COLOCANDO 0 REPARE QUE TODOS OS ELEMENTOS TERÃO 120PX,POREM POR SEREM DO TAMANHO MAIOR DO QUE A CAIXA ELES TRASNBORDAM. */
+/* VEJA ABAIXO, CASO QUEIRA VER PRA LEMBRAR TIRE DO COMENTARIO O FLEX-SHRINK E O FLEX-BASIS.  */
+
+/* flex-grow é o crescimento automatico do item e a distribuição desse item conforme os espaços vazios. */
+.item {
+  
+  /*isso quer dizer : quero que todos os items cresçam automaticamente e se destribuam conforme os espaços vazios.*/
+  /*flex-grow: 1;*/ 
+
+ /* flex-basis: 150px; */
+  /* flex-shrink é o encolhimento automatico. se deixar o valor 0,ele desativa o encolhimento automatico. */
+  /*flex-shrink: 0.5;*/
+}
+.item:nth-child(2){
+  /* flex-grow: 2; */
+
+  /*QUANTO MAIOR O NUMERO MAIS ELE VAI ENCOLHER*/
+  /*flex-shrink: 2;*/
+}
+
+
+/* SHORTHAND FLEX */
+
+.item {
+/*Quando aplicamos o valor de 'initial' ele recebe os seguintes valores: 0,1,auto. O numero 0 está dizendo pra não crescer(flex-grow),o numero 1 está dizendo pra encolher(flex-shrink). e o 'auto' pra deixar o flex-basis no auto. */
+/*flex: initial;*/
+
+/*Quando aplicamos o valor de 'auto' ele recebe os seguintes valores: 1,1,auto. O numero 1 está dizendo pra  crescer(flex-grow),o numero 1 está dizendo pra encolher(flex-shrink). e o 'auto' pra deixar o flex-basis no auto.*/
+/* flex: auto; */
+
+/*Quando aplicamos o valor de 'none' ele recebe os seguintes valores: 0,0,auto. O numero 0 está dizendo pra não crescer(flex-grow),o numero 0 está dizendo pra não encolher(flex-shrink). e o 'auto' pra não ter o flex-basis.*/
+/* flex: none;     */
+
+/* QUANDO COLOCAMOS O VALOR NUMERICO NO FLEX, ENTÃO O PRIMEIRO PASSA A SER O (FLEX-GROW:1) , QUANDO COLOCA O VALOR DE APENAS UM NUMERO EXEMPLO : flex:1. O FLEX-SHRINK PREECHE AUTOMATICAMENTE COM O NUEMRO 1, EXEMPLO:(FLEX-SHRINK:1) PORÉM ELE FICA COM FLEX-BASIS 0, EXEMPLO:(FLEX-BASIS:0).*/
+/* flex: 1; */
+
+/*QUANDO COLOCAMOS O VALOR DE UNIDADE NO FLEX, EXEMPLO : flex:120px ou flex:10%. ENTÃO ELE É SOMENTE O (FLEX-BASIS). SÓ QUE  AUTOMATICAMENTE TEM (FLEX-GROW:1) E TEM AUTOMATICAMENTE O (FLEX-SHRINK:1)  */
+/* flex: 120px; */
+
+/* QUANDO COLOCAMOS 2 VALORES NUMERICOS EXEMPLO flex: 0 1. O PRIMEIRO VALOR QUE É O 0, FICA ASSIM: (FLEX-GROW:0) E O SEGUNDO VALOR É O (FLEX-SHRINK:1) PORÉM AUTOMATICAMENTE O FLEX-BASIS SE TORNA 0, EXEMPLO:(FLEX-BASIS:0);  */
+/* flex: 0 1; */
+
+/* POREM SE COLOCAMOS 2 VALORES, 1 NUMERICO E OUTRO COM UNIDADE DE MEDIDA EXEMPLO flex: 0 10%. O PRIMEIRO VALOR QUE É O 0, FICA ASSIM: (FLEX-GROW:0), O FLEX-SHRINK AUTOMATICAMENTE RECEBE O NUMERO 1 EXEMPLO:(FLEX-SHRINK:1), E O 10% PASSA A SER O FLEX-BASIS, EXEMPLO:(FLEX-BASIS:10%)  */
+/* flex: 0 10%; */
+
+/* QUANDO COLOCAMOS 3 VALORES , A ORDEM IMPORTA! EXEMPLO: flex:1 0 150px. O VALOR DE 1 É O FLEX-GROW EXEMPLO: (FLEX-GROW:1), O VALOR DE 0 É O FLEX-SHRINK EXEMPLO(FLEX-SHRINK:0), E O 150px É O FLEX-BASIS EXEMPLO:(FLEX-BASIS:150px). */
+/* ENTÃO FICA ASSIM: FLEX-GROW:1 FLEX-SHRINK:0  FLEX-BASIS:150px */
+/* flex: 1 0 150px; */
+
+
+}
+
+
+/* ORDER. TODOS ELES POR PADRÃO VAI TER O ORDER:0;*/
+/* SE EU COLOCAR ACIMA DE 0 PRA UM ELEMENTO ESPECIFICO ELE VAI JOGAR PRO FINAL, SE EU COLOCAR NEGATIVO EXEMPLO: ORDER:-1 PRA ALGUM ELEMENTO ESPECIFICO ELE JOGA PRO COMEÇO. */
+.item {
+  /* flex-basis: 10%; */
+  /* flex: 1 1 100px; */
+}
+.item:nth-child(2) {
+/* order: -1; */
+}
+
+
+/* O FLEX-FLOW É UM SHORTHAND PRA UM FLEX-DIRECTION E O FLEX-WRAP ELE SGNIFICA QUE SE EU COLOCAR APENAS WRAP POR EXEMPLO: (FLEX-FLOW:FLEX-WRAP) ELE VAI ENTENDER QUE É SOMENTE O WRAP, PORÉM,
+SE EU COLOCAR, EXEMPLO:(FLEX-FLOW:FLEX-WARP COLUMN) PODEM RECEBER 2 PODRIEDADES AO MESMO TEMPO. MAS SE QUISER APENAS 1 PODE TAMBEM. EXEMPLO: (FLEX-FLOW:COLUMN) ELE VAI ENTENDER QUE É APENAS O (FLEX-DIRECTION) */
+.container {
+/* flex-flow: wrap column; */
+/* flex-flow: colum; */
+}
+
+
+/* ROW-GAP ESPAÇAMENTO ENTRE AS LINHAS. FAZ MAIS SENTIDO QUANDO APLICA O FLEX-WRAP */
+/* COLUMN-GAP É ESPAÇAMENTO ENTRE AS COLUNAS  */
+.container {
+/* flex-wrap: wrap; */
+/* row-gap: 2rem; */
+/* column-gap: 2rem; */
+/* POREM SE EU APLICO SOMENTE O GAP , O GAP VAI APLICAR TANTO PRA COLUNAS QUANTO PRA LINHAS */
+/* gap: 2rem; */
+}
+
+.item {
+/* flex: 0 1 120px; */
+}
+
+
+/* ALIGN-SELF */
+.container{
+  height: 50vh;
+
+}
+
+.item {
+flex-basis: 10%;
+}
+
+.item:nth-child(2){
+  align-self:self-end;
+}
+
+
+

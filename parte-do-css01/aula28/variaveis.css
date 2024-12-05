@@ -1,0 +1,15 @@
+:root{
+  /* PARA CRIAR UMA VARIAVEL */
+  /* não pode colocar caracteres especias */
+  /* não pode ter espaços */
+  /* não pode iniciar com numeros */
+  /* se no caso você criou a variavel e colocou um valor de cor nela,coloque o ; no final */
+  --bg-color: blue;
+
+}
+
+
+body {
+/* PARA PEGAR ESSA VARIAVEL */
+background-color: var(--bg-color);
+}
