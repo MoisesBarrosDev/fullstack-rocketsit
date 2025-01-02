@@ -1,0 +1,166 @@
+/* 
+#PROPIEDADES FUNDAMENTAIS PARA USAR O GRID
+
+TODO GRID É COMPOSTO DE 2 PRINCIPAIS GRUPOS:
+`container : o pai`   e   `itens: o(s) filhos`
+*/
+
+
+/* 
+display:grid
+perceba que quando colocar o display grid os elementos que são inline passa a se tornar display block.
+*/
+
+/* # CONTAINER (pai)
+- display: grid;
+- grid-template; = o grid-template é um shorthand desses 2 abaixos, - grid-template-rows, - grid-template-columns.
+- grid-template: [grid-template-rows] / [grid-template-columns];
+ FUNCIONANDO NA PRATICA O GRID-TEMPLATE SHORTHAND:
+ grid-template: 100px 200px 1fr / 50px 1fr;
+ EXPLICAÇÃO: 
+ Antes do /: Define as linhas (grid-template-rows).
+Primeira linha: 100px de altura.
+Segunda linha: 200px de altura.
+Terceira linha: O resto do espaço disponível (1fr).
+Depois do /: Define as colunas (grid-template-columns).
+Primeira coluna: 50px de largura.
+Segunda coluna: Ocupa o restante do espaço disponível (1fr).
+
+
+
+- grid-template-rows; = grid-template-rows controla as linhas do grid.
+- grid-template-columns; = sgnifica que ele so vai mexer na coluna, ela define a quantidade de colunas, o tamanho de cada coluna e como  as colunas devem ser distribuídas no container.
+  Permite definir quantas linhas haverá e qual será a altura de cada linha.
+  row em inglês significa linha.
+- grid-template-areas; = serve para definir as areas onde o conteudo vai ficar
+- gap = gap é um , shorthand do row-gap e column-gap
+- row gap;
+- column-gap;
+*/
+
+body {
+  margin: 0;
+
+}
+
+#app {
+  /* display: grid; */
+  /* PODE USAR QUALQUER VALOR NO grid-template-columns:1fr 200px 50% 30vw 1rem; */
+  /* grid-template-columns: 100px 200px 300px; */
+  /* grid-template-columns: 1fr 1fr 1fr; aqui ele vai dividir por igual. */
+
+  /* REPARE ABAIXO QUE A VIRGULA É ESSENCIAL. */
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* o repeat ela funciona da seguinte forma: na primeira parte é quantas colunas você quer que ela tenha, e a segunda define o tamanho de cada uma das colunas.*/
+}
+
+
+#app {
+  /* grid-template-rows: repeat(2, 30%); */
+  /* grid-template-rows: 200px 50%; aqui ele definiu a altura  da primeira linha(ou coluna com 200px, e a segunda linha(ou coluna) como 50% da vh do pai que está definida a 100vh */
+  height: 100vh;
+  display: grid;
+  grid-template:
+  /* NA PRIMEIRA PROPIEDADE É O GRID-TEMPLATE-AREAS, A SEDGUNDA PROPIEDADE É O GRID-TEMPLATE-ROWS(80px,40px,50px) E A ULTIMA PROPIEDADE É O GRID-TEMPLATE-COLUMNS  */
+   "A B B" 80px
+   "A B B" 40px
+   "A C D" 50px / 80px 1fr 2fr;
+    /* "header header header" 27px / 40px 
+    "main main aside" 30px / 10px
+    "footer footer footer" 50px / 80px;
+    gap: 30px; */
+      gap: 30px;
+      padding: 30px;
+      box-sizing: border-box;
+}
+
+div > * {
+  border: 1px solid red;
+}
+
+/* 
+span {
+  border: 1px solid blue;
+} */
+
+/* #app span:last-child outra maneira de pegar o ultimo filho.
+#app span:nth-child(3) {
+  border: 1px solid pink;
+
+} */
+
+
+
+/* # ITENS (FILHOS)
+  --grid-column; = ele é um shorthand dois 2 elementos que estão abaixo.
+  --grid-column-start;
+  --grid-column-end;
+
+  --grid-row; = ele é um shorthand dois 2 elementos que estão abaixo.
+  --grid-row-start;
+  --grid-row-end;
+
+  --grid-area;
+ */
+
+
+/* UM TIPO DE LAYOUT */
+
+/* #app header {
+  grid-column-start: 1 ;
+  grid-column-end: 4 ;
+}
+
+#app main{
+  shorthand do grid column-start e grid-column-end.LEMBRE QUE EXISTE A LINHA VIRTUAL EXEMPLO:
+  SE VOCÊ DEFINIU 3 COLUNAS E 3 LINHAS EXISTE UMA LINHA VIRTUAL QUE NÃO É DEFINIDA MAIS EXISTE, ENTÃO SE DEFINIU 3 LINHAS E
+  3 COLUNAS NA VERDADE SÃO 4 LINHAS E  4 COLUNAS POIS ESSE NUMERO A MAIS É A LINHA VIRTUAL.;
+  grid-column: 1/3 
+}
+
+
+#app footer {
+  grid-column: 1/4;
+} */
+
+
+
+/* OUTRO TIPO DE LAYOUT */
+
+/* #app header {
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+#app main {
+  grid-column: 2/4;
+  grid-row: 1/3;
+} */
+
+/*essa parte de baixo não foi nescessaria pois o grid entendeu completamente, caso queira ver funcionando tire tudo do comentario.*/
+/* #app aside {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+
+#app footer{
+  grid-column:3/4;
+  grid-row: 3/4;
+} */
+
+/* OUTRA FORMA DE FAZER USANDO O GRID-TEMPLATE-AREAS */
+
+#app header {
+  /* grid-area: header; */
+  grid-area: A;
+}
+
+#app main {
+  grid-area: B;
+  /* grid-area: main; */
+}
+
+#app footer {
+  /* grid-area: footer; */
+} 

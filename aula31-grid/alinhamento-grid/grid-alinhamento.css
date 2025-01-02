@@ -1,0 +1,83 @@
+/* #PROPIEDADES DE ALINHAMENTO */
+
+/* EXISTEM 9 PROPIEDADES FUNDAMENTAIS */
+
+/* **6 APLICADAS EM CONTAINER */
+/* 
+  `align-content` 
+   `justify-content` 
+   `place-content`
+
+   `align-items`  
+   `justify-items`
+   `place-items` 
+*/
+
+/* **3 aplicadas em items */
+/* 
+    `align-items`
+    `justify-self` 
+    `place-self` 
+*/
+
+/* ENTÃO PODEMOS SEPARAR EM 3 GRUPOS:
+   `align` , `justify`  , `place` 
+*/
+
+
+/*  CADA UM DELES IRÁ OBSERVAR OU O:
+    - conteúdo do elemento `content`
+    - itens do elemento `items`
+    - o própio elemento `self`
+*/
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 8px;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+
+  /* PROPIEDADES COM O CONTENT: */
+  /* place-content: space-evenly; */
+  /* justify-content: space-evenly; */
+  /* align-content: center; */
+  /* place-content: center;  */
+  /* align-content: space-around;  */
+  /* align-content:space-between; meche com o elemento no eixo y */
+  /* justify-content: end; meche com o elemento no eixo x */
+  /* place-content: space-around; essa propiedade é a junção do justify-content e do align-content. meche ao mesmo tempo no eixo x e eixo y */
+
+
+
+  /* PROPIEDADES COM O ITEMS: */
+
+  /* align-items: center; o align sempre trabalha no eixo y, o eixo y é o eixo vertical.*/
+  /* justify-items:flex-end ; o justify sempre trabalha no eixo x, o eixo x é o eixo horizontal.*/
+  /* place-items: center; o place é uma junção do align e justify, ele trabalha tanto no eixo y quanto no eixo x ao mesmo tempo.*/
+}
+
+.grid>div {
+  background-color: cornflowerblue;
+
+}
+
+.grid div:nth-child(2) {
+  /* PROPIEDADES COM O SELF, ALINHA ELE MESMO. */
+  align-self: center;
+  /* justify-self: center; */
+  /* place-self: end; meche tanto no eixo y quanto no eixo x ao mesmo tempo. */
+}
