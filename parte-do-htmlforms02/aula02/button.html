@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button</title>
+</head>
+
+<body>
+  <!--por padrão ja vem estilo do User Agent-->
+  <!-- atributos do button: -->
+  <!-- O primeiro atributo é do tipo: type="submit": Um botão dentro da tag <form> ele serve para enviar os dados deo formulario pra algum lugar, esse é o padrão,se estiver dentro do <form>. exemplo: -->
+  <!-- 
+    <form>  
+       <button type="submit">submit</button>
+     </form>
+      -->
+
+
+  <!-- O segundo atributo é do tipo: type="reset": ele serve para limpar campos, exemplo:  -->
+  <!--
+   <form> 
+    <input type="text" name="name"> 
+    <button type="reset">clear</button>
+  </form>
+   -->
+
+
+  <!-- O terceiro atributo é do tipo: autofocus: Faz com que o botão receba automaticamente o foco quando a página é carregada. exemplo:-->
+  <!-- 
+   <form>  
+    <button autofocus>submit</button>
+  </form> 
+  -->
+
+
+  <!-- O terceiro atributo é do tipo: disabled: Desativa o botão, impedindo que ele seja clicado ou ativado.
+  Visualmente, ele é exibido em um estado "esmaecido" por padrão. Quando disativar o botão: não permitir a pessoa
+  enviar o formulario,enquanto estiver digitando o formulário (precisa de JavaScript). agora um exemplo do botão desabilitado:
+ -->
+  <!-- 
+ <form>
+    <button disabled>submit</button>
+  </form> 
+  -->
+
+
+
+
+  <!-- Os atributos "name" e "value" são usados para identificar e transmitir informações ao enviar um formulário. -->
+
+  <!-- O atributo "name" funciona como o identificador do botão. Exemplo: name="botao1". -->
+  <!-- Esse nome será usado pelo servidor ou aplicação para reconhecer qual botão foi clicado. -->
+
+  <!-- O atributo "value" define o valor associado ao "name". Exemplo: value="valor_do_botao". -->
+  <!-- Esse valor será enviado junto com os dados do formulário quando o botão for clicado. -->
+
+  <!-- No exemplo abaixo, o botão "submit1" enviará o "name" como "botao1" e o "value" como "valor_do_botao". -->
+  <form>
+    <input type="text" name="name">
+    <button name="botao1" value="valor_do_botao" type="submit">submit1</button>
+
+    <!-- O botão "submit 2" está desativado por causa do atributo "disabled" e não pode ser clicado. -->
+    <!-- O atributo "autofocus" faria este botão receber o foco automático ao carregar a página, mas está ignorado devido ao "disabled". -->
+    <button autofocus disabled>submit 2</button>
+  </form>
+
+</body>
+
+</html>
