@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  
+  <!-- O elemento <form> no HTML é usado para capturar dados do usuário, como email, login ou preferências. -->
+  <!-- Ele também permite criar interfaces interativas que enviam dados ao servidor ou processam informações no front-end. -->
+  <!-- Um dos atributos básicos de <form> é "action", que define o destino (uma URL) para onde os dados do formulário serão enviados. -->
+  <!-- O atributo "action" indica o destino para onde os dados do formulário serão enviados após o envio (submit). -->
+  <!-- Se o "action" estiver vazio, os dados serão enviados para a mesma página em que o formulário está. -->
+  <form action="">
+    <input type="text" name="name">
+    <button>submit</button>
+  </form>
+
+
+  <!-- O atributo "method" no elemento <form> define qual verbo HTTP será usado ao enviar o formulário. -->
+  <!-- HTTP (Hypertext Transfer Protocol) é um protocolo ou conjunto de regras que regula a transmissão de informações na web. -->
+  <!-- Os principais verbos HTTP usados em formulários são: -->
+
+  <!-- GET: Envia os dados anexados à URL como parâmetros. Exemplo: /user?id=20&filter=today. -->
+  <!-- Esses dados podem ser vistos na barra de endereço do navegador e podem ser utilizados diretamente pelo front-end. -->
+
+  <!-- POST: Envia os dados no corpo da requisição, sem adicioná-los à URL. -->
+  <!-- Este método é preferido para informações sensíveis, pois os dados não aparecem na barra de endereço. -->
+  <!-- Os dados enviados por POST são geralmente processados pelo back-end. -->
+  <form method="post">
+    <input type="text" name="name">
+    <button>submit</button>
+  </form>
+
+
+
+</body>
+
+</html>
