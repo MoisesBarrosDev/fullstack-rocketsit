@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input email</title>
+</head>
+
+<body>
+  <!-- ATRIBUTOS COMUNS E IMPORTANTES PARA O INPUT TIPO "EMAIL" -->
+
+  <!-- 
+type="email" 
+- Define o campo para entradas no formato de e-mail (ex.: usuario@dominio.com). 
+- O navegador valida automaticamente o formato.
+-->
+
+  <!-- 
+name 
+- Nomeia o campo para identificação ao enviar os dados no formulário. 
+- Neste caso, o nome é "mail".
+-->
+
+  <!-- 
+multiple 
+- Permite inserir vários e-mails separados por vírgula.
+-->
+
+  <!-- 
+minlength 
+- Define o número mínimo de caracteres permitidos no e-mail. 
+- Aqui, o mínimo é 10 caracteres.
+-->
+
+  <!-- 
+maxlength 
+- Define o número máximo de caracteres permitidos no e-mail. 
+- Aqui, o máximo é 30 caracteres.
+-->
+
+  <!-- 
+pattern 
+- Especifica um padrão que o e-mail deve seguir. 
+  * .+@rocketseat\.com:
+    - .+ : Garante que haja pelo menos um caractere antes do símbolo "@".
+          O "." aceita qualquer caractere, e o "+" exige um ou mais.
+    - @rocketseat\.com : Garante que o domínio termine exatamente em "@rocketseat.com".
+  * Assim, apenas e-mails do domínio "@rocketseat.com" são aceitos.
+-->
+
+  <!-- 
+required 
+- Torna o campo obrigatório, impedindo o envio do formulário se estiver vazio.
+-->
+
+  <!-- 
+title 
+- Mostra uma mensagem explicando o formato esperado caso o valor inserido seja inválido. 
+- Aqui, a mensagem é "Emails apenas @rocketseat.com".
+-->
+
+  <form action="">
+    <input type="email" name="mail" multiple minlength="10" maxlength="30" pattern=".+@rocketseat\.com" required
+      title="Emails apenas @rocketseat.com">
+    <button>submit</button>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>label</title>
+</head>
+
+<body>
+  <!-- FORMULÁRIO SIMPLES COM LABEL, INPUT E BOTÃO -->
+  <!-- 
+  Este formulário contém um rótulo (label), um campo de entrada de texto (input) e um botão para envio. Abaixo está a explicação detalhada de cada elemento:
+
+  1. <label>
+    - Tag usada para descrever ou rotular o campo de entrada associado.
+    - for="name" -> Associa o rótulo a um campo de entrada específico cujo id ou name é "name".
+      * Quando o usuário clica no texto "Nome", o foco será automaticamente dado ao campo de entrada correspondente.
+    - Conteúdo entre a tag <label> e </label> -> O texto "Nome" é exibido para o usuário como um rótulo descritivo.
+
+  Propósito:
+  - Melhorar a acessibilidade para usuários com leitores de tela.
+  - Facilitar a interação para o usuário ao clicar no rótulo.
+
+  2. <input>
+    - type="text" -> Define o campo como entrada de texto. Permite ao usuário digitar qualquer sequência de caracteres.
+    - name="nome" -> Nome do campo, que será usado como chave ao enviar o formulário.
+    - id="name" -> ele está recebendo esse nome por causa do for que está atribuido no label, para quando clicar nele automaticamente cair dentro do input.
+    - placeholder="coloque seu nome" -> Exibe um texto temporário dentro do campo, indicando ao usuário o que deve ser digitado.
+      * O placeholder desaparece assim que o usuário começa a digitar.
+
+    Funcionamento:
+    - O usuário digita o nome no campo.
+    - Este valor será enviado ao servidor com a chave "nome".
+
+  3. <button>
+    - Tag usada para criar um botão clicável.
+    - Conteúdo entre <button> e </button> -> Texto "Submit", indicando a ação que o botão realiza.
+
+    Propósito:
+    - Submeter os dados do formulário ao servidor quando clicado.
+
+  Funcionamento geral do formulário:
+  - O rótulo "Nome" descreve o propósito do campo de entrada.
+  - O campo de texto coleta o nome do usuário.
+  - Ao clicar em "Submit", o formulário envia os dados inseridos no campo com a chave "nome".
+
+  Observações:
+  - O uso do <label> com o atributo for melhora a experiência do usuário e a acessibilidade.
+  - O placeholder é uma dica visual, mas não deve substituir o rótulo, pois não é acessível para todos os usuários.
+-->
+  <form action="">
+    <label for="name">Nome</label>
+    <input type="text" name="nome" id="name" placeholder="coloque seu nome">
+    <button>Submit</button>
+  </form>
+</body>
+
+</html>

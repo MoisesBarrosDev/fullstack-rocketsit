@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+
+<body>
+
+  <!-- FORMULÁRIOS COM <SELECT> E <OPTGROUP> -->
+  <!-- 
+  TÍTULO: SELEÇÃO DE CARROS COM AGRUPAMENTOS
+
+  Este exemplo contém dois formulários, cada um com listas suspensas (<select>) para seleção de opções. O segundo formulário utiliza o elemento <optgroup> para agrupar opções relacionadas. Abaixo estão as explicações detalhadas:
+
+  1. <select>
+    - Tag usada para criar uma lista suspensa ou uma caixa de múltipla seleção.
+    - Atributos utilizados:
+      * name="carros" -> Nome do campo. Este será o identificador da lista ao enviar os dados do formulário.
+      * multiple (opcional) -> Permite que o usuário selecione várias opções ao mesmo tempo. Ausente no primeiro formulário, presente no segundo.
+      * size="6" (opcional) -> Define quantas opções são exibidas de uma vez na caixa. No segundo formulário, 6 opções são exibidas simultaneamente.
+
+    Funcionamento:
+    - O usuário pode selecionar uma ou várias opções, dependendo da presença do atributo `multiple`.
+
+    Propósito:
+    - Capturar uma ou mais escolhas do usuário em um formulário.
+
+  2. <option>
+    - Tag usada para definir cada opção dentro de um <select>.
+    - Atributos utilizados:
+      * value="ford", "corsa", etc. -> Valor enviado ao servidor ao selecionar a opção correspondente.
+      * label="Ford", "Corsa", etc. -> Texto que aparece para o usuário como nome da opção. Útil para personalizar a exibição.
+
+    Funcionamento:
+    - Quando o usuário seleciona uma opção, o valor do atributo `value` é enviado.
+
+    Propósito:
+    - Fornecer ao usuário uma lista de opções para escolher.
+
+  3. <optgroup>
+    - Tag usada dentro de <select> para agrupar opções em categorias relacionadas.
+    - Atributos utilizados:
+      * label="Esportivo", "Familia" -> Define o nome do grupo exibido para o usuário.
+
+    Funcionamento:
+    - Agrupa visualmente as opções, facilitando a navegação em listas longas ou com categorias específicas.
+
+    Propósito:
+    - Melhorar a organização e a legibilidade de opções em listas longas ou complexas.
+
+  Observações:
+  - O atributo `multiple` permite múltiplas seleções, mas sem ele, o usuário pode escolher apenas uma opção.
+  - O uso de <optgroup> torna a interface mais organizada, agrupando opções de maneira lógica e intuitiva.
+  - Atributos como `size`, `label` e `value` melhoram a usabilidade e a funcionalidade da lista.
+
+  PRIMEIRO FORMULÁRIO:
+  - Apenas lista suspensa básica sem agrupamento.
+
+  SEGUNDO FORMULÁRIO:
+  - Lista suspensa com múltiplas seleções permitidas, agrupando opções em categorias "Esportivo" e "Familia".
+-->
+  <form action="">
+    <select name="carros">
+      <option value="">selecione</option>
+      <option label="Ford" value="ford">
+      <option label="Corsa" value="corsa">
+      <option label="Bmw" value="bmw">
+
+    </select>
+    <button>Submit</button>
+  </form>
+
+
+
+
+  <form action="">
+
+    <select name="carros" multiple size="6">
+
+      <optgroup label="Esportivo">
+
+        <option label="Ford" value="ford">
+        <option label="Corsa" value="corsa">
+        <option label="Bmw" value="bmw">
+        <option label="Ferrari" value="ferrari"></option>
+
+      </optgroup>
+
+
+      <optgroup label="Familia">
+
+        <option label="Zafira" value="zafira">Opção Alternativa</option>
+        <option label="Gol" value="gol">
+        <option label="Fiat Argo" value="Fiat Argo">
+        <option label="Fiat Pulse" value="Fiat Pulse">
+
+      </optgroup>
+
+
+    </select>
+    <button>Submit</button>
+  </form>
+</body>
+
+</html>

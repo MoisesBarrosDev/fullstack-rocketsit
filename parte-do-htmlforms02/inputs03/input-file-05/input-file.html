@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input file</title>
+</head>
+
+<body>
+
+
+  <!-- FORMULÁRIO PARA UPLOAD DE ARQUIVOS -->
+  <!-- 
+  Este formulário permite o envio de arquivos ao servidor. 
+  Abaixo estão explicados os atributos utilizados:
+
+  enctype="multipart/form-data" -> Define a codificação usada no envio do formulário, necessária para enviar arquivos corretamente.
+
+  action="/" -> Especifica o destino (URL) para onde os dados do formulário serão enviados.
+
+  method="post" -> Garante o envio seguro dos dados, sem exibição na URL.
+
+  type="file" -> Define que o campo permite selecionar arquivos para upload.
+
+  name="Foto-perfil" -> Nome associado ao campo, usado para identificar o arquivo no backend.
+
+  multiple -> Permite selecionar e enviar múltiplos arquivos.
+
+  accept=".pdf", ".png", "video/*", "image/*", "audio/*" -> Restringe os tipos de arquivos aceitos para upload:
+    - ".pdf" para arquivos PDF;
+    - ".png" para imagens PNG;
+    - "video/*" para qualquer formato de vídeo;
+    - "image/*" para qualquer formato de imagem;
+    - "audio/*" para qualquer formato de áudio.
+-->
+
+
+  <form action="/" enctype="multipart/form-data" method="post">
+    <input 
+    type="file" 
+    name="Foto-perfil" 
+    multiple accept=".pdf" 
+    accept=".png" 
+    accept="video/*" 
+    accept="image/*"
+    accept="audio/*">
+
+
+    <button>Submit</button>
+  </form>
+
+
+
+</body>
+
+</html>

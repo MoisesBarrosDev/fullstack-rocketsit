@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fieldset</title>
+</head>
+
+<body>
+
+  <!-- FORMULÁRIO COM USO DE FIELDSET E LEGEND -->
+
+  <!-- 
+<form>: Elemento raiz para criar um formulário que coleta e envia dados ao servidor.
+- action="": Define a URL para onde os dados do formulário serão enviados. Aqui está vazio, o que significa que os dados serão enviados para a URL atual.
+-->
+  <form action="">
+
+    <!-- 
+  <fieldset>: Agrupa visualmente e semanticamente elementos relacionados dentro do formulário.
+  -->
+    <fieldset>
+
+      <!-- 
+    <legend>: Adiciona um título descritivo ao grupo de campos dentro do <fieldset>, indicando seu propósito.
+    - Aqui, "Contato" é usado para identificar que os campos estão relacionados a informações de contato.
+    -->
+      <legend>Contato</legend>
+
+      <!-- 
+    <input type="text">: Campo de entrada de texto para coletar o nome do usuário.
+    - name="nome": Define o nome para identificar o dado quando enviado ao servidor.
+    -->
+      <input type="text" name="nome">
+
+      <!-- 
+    <input type="email">: Campo de entrada para e-mails, que verifica automaticamente se o formato inserido é válido.
+    - name="mail": Define o nome para identificar o dado no envio.
+    -->
+      <input type="email" name="mail">
+
+      <!-- 
+    <button>: Botão usado para enviar os dados preenchidos no formulário para a URL especificada no atributo action.
+    - Texto "enviar" no botão indica claramente a ação esperada.
+    -->
+      <button>enviar</button>
+
+    </fieldset>
+
+  </form>
+
+
+
+
+
+  <form action="">
+
+    <fieldset>
+      <legend>Contato</legend>
+      <input type="text" name="nome">
+      <input type="email" name="mail">
+      <button>enviar</button>
+    </fieldset>
+
+  </form>
+
+</body>
+
+</html>

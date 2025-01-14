@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input hidden</title>
+</head>
+
+<body>
+
+  <!-- FORMULÁRIO COM CAMPOS OCULTO (HIDDEN) E DE DATA (DATE) LEIA A DOCUMENTAÇÃO MO DEV.DOCS SOBRE O INPUT-->
+  <!-- 
+  Este formulário combina um campo oculto e um campo de entrada de data. Abaixo está a explicação detalhada de cada elemento:
+
+  1. <input type="hidden">
+    - type="hidden" -> Cria um campo invisível para o usuário.
+    - name="id" -> Nome do campo oculto. Serve como a chave para o valor associado.
+    - value="dwdqdfqwfdq-adqwfaefw-DWAWFD" -> Valor associado ao nome "id". Este dado será enviado automaticamente com o formulário.
+
+    Propósito do campo oculto:
+    - Passar dados importantes que o usuário não precisa ver ou alterar.
+    - Exemplos de uso: IDs únicos, tokens de autenticação, ou informações predefinidas para processamento no backend.
+
+  2. <input type="date">
+    - type="date" -> Cria um campo que permite selecionar uma data.
+    - name="aniversario" -> Nome do campo. Este nome será a chave associada ao valor da data selecionada.
+    - id="" -> Identificador único (opcional) que pode ser usado no JavaScript ou CSS para manipular este campo.
+
+    Propósito do campo de data:
+    - Permitir que o usuário selecione uma data específica em um formato padronizado.
+    - Ideal para capturar informações como datas de aniversário, eventos, ou vencimentos.
+
+    Funcionamento:
+    - O usuário seleciona uma data no calendário interativo que aparece ao clicar no campo.
+    - Quando o formulário é enviado, o valor selecionado é enviado com o nome "aniversario".
+
+  3. <button>Submit</button>
+    - Botão usado para submeter o formulário.
+
+  Funcionamento geral do formulário:
+  - Quando o botão "Submit" é clicado, o formulário envia:
+    1. O valor oculto associado ao "id" (ex.: "dwdqdfqwfdq-adqwfaefw-DWAWFD").
+    2. A data selecionada no campo "aniversario".
+
+  Observações:
+  - O campo hidden e o campo de data têm propósitos diferentes, mas complementares.
+    - O hidden serve para dados internos do sistema.
+    - O date permite ao usuário fornecer informações de data de forma intuitiva e padronizada.
+-->
+  <form action="">
+    <input type="hidden" name="id" value="dwdqdfqwfdq-adqwfaefw-DWAWFD">
+    <input type="date" name="aniversario" id="">
+    <button>Submit</button>
+  </form>
+
+
+  <form action="">
+    <input type="week" name="corrida" id="">
+    <button>Submit</button>
+  </form>
+
+
+
+</body>
+
+</html>

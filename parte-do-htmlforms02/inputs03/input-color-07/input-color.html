@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input color</title>
+</head>
+
+<body>
+<!-- FORMULÁRIO COM SELETOR DE CORES E SUGESTÕES -->
+<!-- 
+  Este formulário permite selecionar ou digitar uma cor, além de oferecer sugestões predefinidas. Abaixo está a explicação dos elementos:
+
+  <datalist id="colorpicker"> -> Cria uma lista de sugestões de cores associada ao input.
+    - id="colorpicker" -> Identifica a lista, permitindo vinculá-la ao atributo "list" de um input.
+    - <option value="#FCAC00"> -> Sugestão de cor com o valor hexadecimal "#FCAC00".
+    - <option value="#ACFCD0"> -> Outra sugestão de cor com o valor hexadecimal "#ACFCD0".
+
+  <input type="color"> -> Cria um seletor de cores.
+    - type="color" -> Define o input como um seletor de cores, permitindo escolher uma cor visualmente.
+    - name="cor-perfil" -> Nome do campo, usado para identificar o valor enviado no backend.
+    - value="#BAFDFD" -> Define a cor inicial padrão selecionada como "#BAFDFD".
+    - list="colorpicker" -> Conecta o input ao <datalist>, exibindo sugestões de cores.
+
+  <button>Submit</button> -> Botão para enviar os dados preenchidos no formulário.
+
+-->
+
+
+
+    <datalist id="colorpicker">
+      <option value="#FCAC00">
+      <option value="#ACFCD0"> 
+    </datalist>
+
+    <input 
+    type="color" 
+    name="cor-perfil" 
+    value="#BAFDFD"
+    list="colorpicker"
+    >
+    <button>Submit</button>
+
+  </form>
+</body>
+
+</html>

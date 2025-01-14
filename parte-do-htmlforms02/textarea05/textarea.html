@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>textarea</title>
+</head>
+
+<body>
+  <!-- FORMULÁRIO COM TEXTAREA E BOTÃO -->
+  <!-- 
+  Este formulário contém uma área de texto (textarea) para entrada de texto pelo usuário e um botão para envio. Abaixo está a explicação detalhada de cada elemento:
+
+  1. <textarea>
+    - Tag usada para criar uma área de texto multilinha, onde o usuário pode digitar mensagens mais longas.
+    - Atributos utilizados:
+      * name="texto" -> Define o nome do campo. Esse nome será usado como chave ao enviar os dados do formulário.
+      * maxlength="15" -> Define o número máximo de caracteres que o usuário pode digitar (neste caso, 15 caracteres). Impede entradas mais longas.
+      * minlength="6" -> Define o número mínimo de caracteres exigidos (neste caso, 6 caracteres). O formulário não será enviado se o texto for menor.
+      * required -> Torna o preenchimento deste campo obrigatório. O formulário não pode ser enviado se o campo estiver vazio.
+      * placeholder="Digite seu texto" -> Mostra um texto temporário dentro da área de texto como instrução para o usuário. Esse texto desaparece assim que o usuário começa a digitar.
+
+    Funcionamento:
+    - O usuário digita uma mensagem ou texto dentro da área.
+    - O valor digitado será enviado ao servidor como o valor do campo "texto".
+    - Se as regras de `maxlength` e `minlength` não forem atendidas, o envio será bloqueado.
+
+    Propósito:
+    - Usado em formulários onde é necessário capturar entradas de texto mais longas, como descrições, comentários ou mensagens.
+
+  2. <button>
+    - Tag usada para criar um botão clicável.
+    - Conteúdo entre <button> e </button> -> Texto "Submit", que indica a ação que o botão realiza.
+
+    Propósito:
+    - Enviar os dados do formulário ao servidor ao ser clicado.
+
+  Funcionamento geral do formulário:
+  - O usuário digita um texto entre 6 e 15 caracteres no campo de texto.
+  - O texto é enviado ao servidor com a chave "texto" quando o botão é clicado.
+  - Se o campo estiver vazio ou o número de caracteres não atender aos requisitos, o envio será bloqueado.
+
+  Observações:
+  - `maxlength` e `minlength` ajudam a controlar o tamanho das entradas do usuário, garantindo que os dados estejam dentro do limite esperado.
+  - O uso de `placeholder` melhora a experiência do usuário ao fornecer orientação visual sobre o que é esperado.
+-->
+  <form action="">
+    <textarea name="texto" maxlength="15" minlength="6" required placeholder="Digite seu texto"></textarea>
+    <button>Submit</button>
+  </form>
+
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input radio</title>
+</head>
+
+<body>
+
+  <!-- FORMULÁRIO COM BOTÕES DE OPÇÃO (RADIO BUTTON) -->
+  <!-- 
+  Este formulário contém dois botões de opção que permitem escolher apenas uma das opções disponíveis. Abaixo estão os detalhes:
+
+  <input type="radio"> -> Cria um botão de opção (radio button).
+    - type="radio" -> Define o campo como um botão de opção, permitindo a seleção de apenas uma opção dentro do mesmo grupo.
+    - name="carro" -> Nome do grupo de botões. Todos os botões com o mesmo nome são agrupados, e apenas um pode ser selecionado por vez.
+    - value="bmw" -> Valor enviado ao backend se este botão for selecionado. Neste caso, o valor será "bmw".
+    - required -> Obriga o usuário a selecionar pelo menos um botão do grupo antes de enviar o formulário.
+
+  Segundo <input>:
+    - type="radio" -> Também é um botão de opção.
+    - name="carro" -> Mesmo nome do primeiro botão, agrupando as opções.
+    - value="corsa" -> Valor enviado ao backend se este botão for selecionado.
+    - checked -> Faz com que este botão esteja selecionado por padrão quando a página é carregada.
+
+  <button>Submit</button> -> Botão usado para enviar a escolha feita no formulário.
+
+  Funcionamento:
+  - O usuário pode escolher entre as opções "bmw" e "corsa".
+  - Como o atributo required está presente, o formulário não pode ser enviado sem uma escolha.
+  - O valor da opção selecionada será enviado ao backend.
+-->
+
+  <form action="">
+    <input type="radio" name="carro" value="bmw" required>
+
+    <input type="radio" name="carro" value="corsa" required checked>
+    <button>Submit</button>
+  </form>
+
+
+
+
+</body>
+
+</html>
