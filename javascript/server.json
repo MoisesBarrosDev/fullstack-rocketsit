@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "name": "gabinte",
+      "price": "800,00",
+      "id": "237f"
+    },
+    {
+      "id": "bffb",
+      "name": "Placa de video",
+      "price": "500"
+    }
+  ],
+  "users": [],
+  "tasks": [
+    {
+      "id": "472d",
+      "tarefa": "estudar",
+      "description": "",
+      "tpStatus": "pendente"
+    },
+    {
+      "id": "9748",
+      "tarefa": "ler a biblia",
+      "description": "",
+      "tpStatus": "concluido"
+    }
+  ]
+}
